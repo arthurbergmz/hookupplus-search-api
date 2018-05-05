@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package user;
+option go_package = "user";
+
+message ShowcaseRequest {
+    string userId = 1;
+}
+
+message ShowcaseResponse {
+    string response = 1;
+}
+
+message CreateRequest {
+    string id = 1;
+}
+
+message CreateResponse {
+    bool response = 1;
+}
+
+message UpdateRequest {
+    string id = 1;
+}
+
+message UpdateResponse {
+    bool response = 1;
+}
+
+message UpdateLocationRequest {
+    string id = 1;
+}
+
+message UpdateLocationResponse {
+    bool response = 1;
+}
+
+message RegisterTargetRequest {
+    string id = 1;
+    string target = 2;
+}
+
+message RegisterTargetResponse {
+    bool response = 1;
+}

@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package event;
+option go_package = "event";
+
+message ShowcaseRequest {
+    string userId = 1;
+}
+
+message ShowcaseResponse {
+    string response = 1;
+}
+
+message CreateRequest {
+    string id = 1;
+}
+
+message CreateResponse {
+    bool response = 1;
+}
+
+message UpdateRequest {
+    string id = 1;
+}
+
+message UpdateResponse {
+    bool response = 1;
+}
+
+message RegisterUserTargetRequest {
+    string id = 1;
+    string user = 2;
+    string target = 3;
+}
+
+message RegisterUserTargetResponse {
+    bool response = 1;
+}

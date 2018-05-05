@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package handshake;
+option go_package = "handshake";
+
+message Request {}
+
+message Response {
+    bool response = 1;
+}

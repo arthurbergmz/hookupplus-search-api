@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package messaging;
+option go_package = "messaging";
+
+import "messaging/channels/handshake/handshake.proto";
+import "messaging/channels/user/user.proto";
+import "messaging/channels/event/event.proto";
+
+service SearchEngine {
+    rpc Handshake (handshake.Request) returns (handshake.Response) {}
+
+    rpc UserShowcase (user.ShowcaseRequest) returns (user.ShowcaseResponse) {}
+    rpc CreateUser (user.CreateRequest) returns (user.CreateResponse) {}
+    rpc UpdateUser (user.UpdateRequest) returns (user.UpdateResponse) {}
+    rpc UpdateUserLocation (user.UpdateLocationRequest) returns (user.UpdateLocationResponse) {}
+    rpc UserRegisterTarget (user.RegisterTargetRequest) returns (user.RegisterTargetResponse) {}
+
+    rpc EventShowcase (event.ShowcaseRequest) returns (event.ShowcaseResponse) {}
+    rpc CreateEvent (event.CreateRequest) returns (event.CreateResponse) {}
+    rpc UpdateEvent (event.UpdateRequest) returns (event.UpdateResponse) {}
+    rpc UserRegisterEventTarget (event.RegisterUserTargetRequest) returns (event.RegisterUserTargetResponse) {}
+}
+
+
